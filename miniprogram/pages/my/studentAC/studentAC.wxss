@@ -1,0 +1,18 @@
+/* pages/my/studentAC/studentAC.wxss */
+.studengtAC-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.field{
+  text-align: center;
+}
+.field picker{
+  font-size: 64rpx;
+}
+button{
+  margin-top: 20rpx;
+  width: 60vw;
+}

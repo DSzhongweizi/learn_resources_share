@@ -1,0 +1,4 @@
+<!--components/circle-progress/circle-progress.wxml-->
+<canvas type="2d" id="circle-progress" class="progress"></canvas>
+<view class="text">{{progress}}%</view>
+

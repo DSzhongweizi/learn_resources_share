@@ -1,0 +1,30 @@
+<!--components/list-item/study-item/study-item.wxml-->
+<view class="study-box">
+  <view class="study-action">
+    <i class="iconfont icon-download" bindtap="download"></i>
+    <i class="iconfont {{is_collect ? 'icon-collected' : 'icon-collect'}}" bindtap="collect"></i>
+  </view>
+  <view class="study-move-box" bindtap="navigateTostudyDetail" bindtouchmove="move"
+    style="transform:translateX({{x_dis}}px)">
+    <view class="study-left">
+      <text class="study-name">{{study.name}}</text>
+      <van-rate value="{{ study.rate }}" bind:change="onChange" allow-half readonly icon-class="rate"
+        custom-class="rate-box" />
+    </view>
+    <view class="study-right">
+      <view class="study-tags">
+        <text class="study-tags-item" wx:for="{{study.tags}}" wx:key="index">{{item}}</text>
+      </view>
+      <text class="study-note">{{study.description}}</text>
+    </view>
+  </view>
+</view>
+<!-- <van-notify id="van-notify" /> -->
+<van-notify id="van-notify" />
+<van-loading wx:if="{{show_loading}}" vertical="true" color="#0094FF" custom-class="loading" size="50">资源准备中...</van-loading>
+<circle-progress style="display:{{show_progress ? 'block' : 'none'}}" id="circle-progress" progress="{{download_progress}}"/>
+
+<!-- <view class="progress-box" wx:if="{{true || show_progress}}">
+  <progress class="progress" percent="{{download_progress}}" stroke-width="6" show-info active="true" active-mode="forwards"/>
+  <icon class="progress-cancel" type="cancel"></icon>
+</view> -->

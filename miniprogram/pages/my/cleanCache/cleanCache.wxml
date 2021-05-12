@@ -1,0 +1,10 @@
+<!--program/pages/my/cleanCache/cleanCache.wxml-->
+<view class="clean-cache-box">
+  <checkbox-group bindchange="checkChange">
+    <label wx:for="{{checkbox}}" wx:key="index">
+      <text>{{item.zh}}</text>
+      <checkbox value="{{index}}:{{item.zh}}" color="#fff"></checkbox>
+    </label>
+  </checkbox-group>
+  <button type="primary" bindtap="cleanConfirm">确认</button>
+</view>

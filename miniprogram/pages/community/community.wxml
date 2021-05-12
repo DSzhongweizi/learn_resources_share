@@ -1,0 +1,10 @@
+<!--pages/community/community.wxml-->
+<search placeholder="搜索" bind:searchInput="searchInput" history_records="{{history_records}}" refer_search="community_search"/>
+<post-item wx:for="{{posts}}" wx:key="_id" post="{{item}}"/>
+<van-empty wx:if="{{empty_tip.state}}" image="{{empty_tip.image}}" description="{{empty_tip.description}}" />
+
+<movable-area>
+  <movable-view direction="all" inertia="true" out-of-bounds bindchange="move" x="{{x}}" y="{{y}}" damping="100">
+    <image bindtap="writePost" class="writePost" src="../../assets/images/send.png"/>
+  </movable-view>
+</movable-area>

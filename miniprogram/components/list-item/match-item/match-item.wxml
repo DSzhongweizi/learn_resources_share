@@ -1,0 +1,34 @@
+<!--components/list-item/competition-item/competition-item.wxml-->
+<view class="match-box" bindlongpress="longpress">
+  <view class="match-img-box">
+    <text wx:if="{{!match.img_url}}" class="match-title">{{match.title}}</text>
+    <image class="match-img" mode="scaleToFill"
+      src="{{match.img_url ? match.img_url : '../../../assets/images/match_title_bg.jpg'}}"></image>
+    <view class="match-datetime-tags">
+      <text class="dt-tags-item">{{apply_state}}</text>
+      <text class="dt-tags-item">{{match_state}}</text>
+    </view>
+  </view>
+  <view class="match-details">
+    <!-- <text></text> -->
+    <text class="sponsor">主办方：{{match.sponsor}}</text>
+    <view class="details-more">
+      <view class="more-item">
+        <text>参赛对象：</text> 
+        <text class="more-text">{{match.match_obj}}</text> </view>
+      <view class="more-item">
+        <text> 级别：</text> 
+        <text class="more-text">{{match.level}}</text> </view>
+      <view class="more-item">
+        <text>报名费：</text> 
+        <text class="more-text">{{match.entry_fee}}</text> </view>
+      <view class="more-item">
+        <text> 类型：</text> 
+        <text class="more-text">{{match.type}}</text> </view>
+    </view>
+    <view class="detail-datetime">
+      <text>报名时间：{{match.apply_datetime}}</text>
+      <text>比赛时间：{{match.match_datetime}}</text>
+    </view>
+  </view>
+</view>

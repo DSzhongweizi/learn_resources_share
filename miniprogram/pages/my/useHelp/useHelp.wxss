@@ -1,0 +1,15 @@
+/* program/pages/my/useHelp/useHelp.wxss */
+@import "../../../assets/styles/iconfont.wxss";
+.use-help-title{
+  width: 100vw;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.use-help-community-title{
+  font-size: 1.2rem;
+  text-align: center;
+}
+/* .use-help-community-subtitle{
+  font-size: 1rem;
+} */

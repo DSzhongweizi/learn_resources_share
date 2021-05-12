@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "textfield":"/components/textfield/textfield"
+  },
+  "navigationBarTitleText": "私信",
+  "navigationStyle": "custom"
+}

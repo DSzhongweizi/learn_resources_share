@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "search": "../../../components/search/search",
+    "van-empty": "@vant/weapp/empty/index",
+    "match-item": "../../../components/list-item/match-item/match-item",
+    "return-top": "../../../components/return-top/return-top"
+  },
+  "navigationBarTitleText": "比赛",
+  "onReachBottomDistance": 200
+}

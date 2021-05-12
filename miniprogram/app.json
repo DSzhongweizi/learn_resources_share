@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/my/my",
+    "pages/community/community",
+    "pages/index/match/match",
+    "pages/common/userinfo/userinfo",
+    "pages/index/study/study",
+    "pages/index/study/detail/detail",
+    "pages/my/studentAC/studentAC",
+    "pages/community/details/details",
+    "pages/community/editPost/editPost",
+    "pages/my/feedback/feedback",
+    "pages/my/loadFile/loadFile",
+    "pages/my/more/more",
+    "pages/my/setup/setup",
+    "pages/my/useHelp/useHelp",
+    "pages/message/privateletter/privateletter",
+    "pages/message/interaction/interaction"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#c2edff"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#bfbfbf",
+    "list": [
+      {
+        "iconPath": "./assets/images/home_page.png",
+        "selectedIconPath": "./assets/images/home_page_selected.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "./assets/images/community.png",
+        "selectedIconPath": "./assets/images/community_selected.png",
+        "pagePath": "pages/community/community",
+        "text": "社区"
+      },
+      {
+        "iconPath": "./assets/images/message.png",
+        "selectedIconPath": "./assets/images/message_selected.png",
+        "pagePath": "pages/message/message",
+        "text": "消息"
+      },
+      {
+        "iconPath": "./assets/images/my.png",
+        "selectedIconPath": "./assets/images/my_selected.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

@@ -1,0 +1,43 @@
+/* pages/community/editTrends/editTrends.wxss */
+
+textarea{
+  position: relative;
+  width: 100%;
+  left: 0.3vw;
+  right: 0.3vw;
+}
+.van-uploader__preview{
+  margin: 1px !important;
+}
+/* .photos .delete{
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  transform: translate(28vw,1vw);
+}
+.photos .photo{
+  float: left;
+  width: 33vw;
+  height: 33vw;
+  border: 0.1vw solid #e2e2e2;
+}
+.photo-box{
+  background-color: #f0f0f0;
+  margin: 0 0.3vw;
+  display: flex;
+  width: 33vw;
+  height: 33vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+
+}
+.photo-box image{
+  width: 20vw;
+  height: 20vw;
+}
+.photo-box text{
+  color: #a8a4a4;
+  font-size: 26rpx;
+} */

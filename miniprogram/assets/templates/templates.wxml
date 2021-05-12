@@ -1,0 +1,19 @@
+<template name="loadmore">
+  <view class="loadmore-box">
+    <view wx:if="{{show_line}}" class="line"></view>
+    <image class="icon {{icon == '' && text == '' ? 'icon-rotate' : ''}}" src="{{icon}}"></image>
+    <text class="text">{{text}}</text>
+    <view wx:if="{{show_line}}" class="line"></view>
+  </view>
+</template>
+
+<!-- 定义 template.wxml-->
+<template name="tmp">
+  <view> 我是模板 {{arg}}</view>
+</template>
+<!-- 使用 index.wxml-->
+<!-- import方式 -->
+<import src="template.wxml"/>
+<template is="tmp" data="{{arg:'我是参数'}}"/>
+<!-- include方式 -->
+<include src="header.wxml"/>

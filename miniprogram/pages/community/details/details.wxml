@@ -1,0 +1,5 @@
+<!--program/pages/community/details/details.wxml-->
+<post-item post="{{post}}" bind:updateComments="updateComments"/>
+<!-- 文章包含评论组件 -->
+<comment-item wx:for="{{comments}}" wx:key="cid" wx:if="{{comments.length}}" pid="{{post._id}}" comment="{{item}}" />
+<van-empty wx:if="{{!comments.length}}" description="暂无评论" />

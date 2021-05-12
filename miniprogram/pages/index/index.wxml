@@ -1,0 +1,31 @@
+<!-- <search showHistory="{{false}}"></search> -->
+<van-notice-bar left-icon="volume-o" mode="closeable" background="#ecf9ff" text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。" />
+<view class="index-box">
+  <swiper indicator-dots='true' indicator-color='#FFFFFE' indicator-active-color='#03C3C3' autoplay='true'
+    circular='true' class='slide-item'>
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" mode='scaleToFill' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='function-box'>
+    <view class='function' bindtap='clickFunciton' wx:for="{{functions}}" wx:key="index" data-func="{{item.text}}">
+      <image class='function-img' src='{{item.icon}}' />
+      <text class='text'>{{item.text}}</text>
+    </view>
+  </view>
+  <view class="recommend-box">
+    <view>
+      <text>资料推荐</text>
+      <view class="hr"></view>
+      <study-item wx:for="{{recommend_resources}}" wx:key="index" study="{{item}}" />
+    </view>
+    <view>
+      <text>赛事推荐</text>
+      <view class="hr"></view>
+      <match-item wx:for="{{recommend_matchs}}" wx:key="index" match="{{item}}" />
+    </view>
+  </view>
+</view>
+<van-notify id="van-notify" />

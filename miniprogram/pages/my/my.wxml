@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="my-box">
+  <i class="iconfont icon-layout" bindtap="adjustLayout"></i>
+  <view class="userinfo {{is_rowlayout ? 'userinfo-rowlayout' : ''}}">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserInfo"> 获取头像昵称 </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" bindtap="navigatoUserInfo"></image>
+      <view class="{{is_rowlayout ? 'userinfo-more-rowlayout' : 'userinfo-more'}}">
+        <text class="userinfo-nickname" bindtap="navigatoUserInfo">{{userInfo.nickName}}</text>
+        <input class=" {{is_rowlayout ? 'userinfo-sign-rowlayout' : 'userinfo-sign'}}" value="{{sign}}" placeholder="该用户很懒，没有留下任何签名" maxlength="20" bindconfirm="inputSign"/>
+      </view>
+    </block>
+  </view>
+  <view class="my-middle">
+    <view class="middle-item" wx:for="{{middle_functions}}" wx:key="index" bindtap='clickFunciton' data-func_zh="{{item.zh}}" data-func_en="{{item.en}}">
+      <text>{{item.num}}</text>
+      <text>{{item.zh}}</text>
+    </view>
+  </view>
+  <view class='my-bottom'>
+    <view wx:for="{{bottom_functions}}" wx:key="index" bindtap='clickFunciton' class='line-box'
+      data-func_zh="{{item.text}}">
+      <view class='line-left'>
+        <image class='bottom-icon' src='{{item.icon}}'></image>
+        <text>{{item.text}}</text>
+      </view>
+      <i class="iconfont icon-right-arrows"></i>
+    </view>
+  </view>
+  <view class="my-tips">
+    <text>tips:进行学生认证更有利于推荐哦！</text>
+  </view>
+</view>

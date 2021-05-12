@@ -1,0 +1,88 @@
+/* pages/my/uploadFile/uploadFile.wxss */
+.load-file-box{
+  width: 100vw;
+  height: 100vh;
+}
+.select-box,.file-info{
+  width: 100vw;
+}
+.select-box{
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.file-info{
+  display: flex;
+  margin: 20rpx 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.file-info view{
+  display: flex;
+  width: 80vw;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.file-info input,.file-info picker{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  color: #808080;
+}
+.file-info input{
+  color: #06a2eb;
+}
+.file-action{
+  display: flex;
+  justify-content: space-between;
+}
+.select-box image{
+  width: 100%;
+}
+.select-box text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #d3d3d3;
+  font-size: 30rpx;
+}
+.tips{
+  margin-top: 20rpx;
+  color: #d3d3d3;
+  font-size: 25rpx;
+}
+
+.file-records{
+  background-color: #fff;
+  margin: 10rpx;
+  padding: 10rpx;
+  border-radius: 15rpx;
+}
+.records-title{
+  font-size: 1.5rem;
+  color: #06a2eb;
+}
+.records-content{
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #808080;
+  font-size: 32rpx;
+}
+.records-content text,.records-content icon{
+  text-align: center;
+  flex:1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.records-content icon{
+  text-align: center;
+  flex: 0.5;
+}
+.no-file-tips{
+  text-align: center;
+}
+

@@ -1,0 +1,14 @@
+/* components/list-item/collect-item/collect-item.wxss */
+.collect-item-box{
+  display: flex;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #888;
+}
+.left,.right{
+  flex:1;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

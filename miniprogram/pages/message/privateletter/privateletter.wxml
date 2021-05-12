@@ -1,0 +1,17 @@
+<!--miniprogram/pages/message/privateletter/privateletter.wxml-->
+<view class="privateletter-box">
+  <view class="topbar">
+    <i class="iconfont icon-return" bindtap="returnButton"></i>
+    <text class="username">{{username}}</text>
+  </view>
+  <scroll-view scroll-y="true" class="chat-box">
+    <block wx:for="{{chat_lists}}" wx:key="index">
+      <view class="chat-item {{item.is_oneself ? 'chat-right' : ''}}">
+        <image class="chat-avatar" src="{{item.is_oneself ? oneself.avatar : other.avatar}}"></image>
+        <view class="chat-content">{{item.content}}</view>
+      </view>
+      <view class="chat-datetime">{{item.datetime}}</view>
+    </block>
+  </scroll-view>
+</view>
+<textfield bind:confirmInput="confirmInput" isInput="true" blurevent="privateletter" placeholderText="请输入对话" />

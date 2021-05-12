@@ -1,0 +1,40 @@
+/* program/pages/common/userInfo/userinfo.wxss */
+@import "/assets/styles/iconfont.wxss";
+.userinfo-top{
+  display: flex;
+  margin: 10rpx;
+}
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+.userinfo-top .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.userinfo-top .right .right-top i{
+  margin-left: 20rpx;
+}
+.icon-attention{
+  color: #666;
+}
+.icon-attentioned{
+  color: red;
+}
+.userinfo-top .right .right-bottom text{
+  margin-right: 20rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+.userinfo-middle{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10rpx 0;
+}
+.userinfo-middle text{
+  color: #333;
+}
+
+

@@ -1,0 +1,2 @@
+<!--miniprogram/pages/message/interaction/interactions.wxml-->
+<interaction-item wx:for="{{interactions}}" wx:key="index" interaction="{{item}}" />

@@ -1,0 +1,6 @@
+.switch-box{
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 5rpx 20rpx;
+}

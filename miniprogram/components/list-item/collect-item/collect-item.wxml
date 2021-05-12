@@ -1,0 +1,7 @@
+<!--components/list-item/collect-item/collect-item.wxml-->
+<view class="collect-item-box" bindtap="navigatoStudyDetails">
+  <view class="left">
+    {{collect.name}}
+  </view>
+  <text class="right">详情</text>
+</view>

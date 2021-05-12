@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "attention-item":"../../../components/list-item/attention-item/attention-item",
+    "collect-item":"../../../components/list-item/collect-item/collect-item",
+    "like-item":"../../../components/list-item/like-item/like-item"
+  },
+  "navigationBarTitleText": "更多"
+}

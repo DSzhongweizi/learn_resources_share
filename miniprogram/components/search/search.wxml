@@ -1,0 +1,29 @@
+<!--components/search/search.wxml-->
+<!-- 搜索框 -->
+<view class="search-bg">
+  <view class="search-box">
+    <i class="iconfont icon-search"></i>
+    <input class='search-input' placeholder="{{placeholder}}" confirm-type='search' 
+      value="{{search_input}}" 
+      bindfocus='inputFocus' 
+      bindblur="inputBlur" 
+      bindinput="inputing"
+      bindconfirm="inputConfirm" 
+    />
+    <i wx:if="{{show_filter}}" class="iconfont icon-filter" bindtap="showFilter"></i>
+    <!-- 历史记录 -->
+    <view class='history-box' wx:if="{{inputFocus && showHistory}}">
+      <view class='title'>
+        <text class="title-text">历史记录</text>
+        <i class="iconfont icon-delete" catchtap="clearHistories"></i>
+        <!-- <image class="title-delete" src='../../assets/images/delete.png' catchtap="clearHistories"></image> -->
+      </view>
+      <view class='content'>
+        <view class='record-box' wx:for="{{history_records}}" wx:key="index">
+          <text class="record-text" bindtap="clickRecord" data-record="{{item}}">{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="placeholder-box"></view>

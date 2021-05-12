@@ -1,0 +1,25 @@
+<!--pages/index/study/study.wxml-->
+<import src="/assets/templates/templates.wxml" />
+<search placeholder="搜索试卷/课件/教材" 
+  bind:searchInput="searchInput" 
+  bind:showFilter="showFilter" 
+  history_records="{{history_records}}" 
+  refer_search="study_search"
+  show_filter="true" 
+/>
+<study-item wx:for="{{studys}}" wx:key="index" study="{{item}}" />
+<van-empty wx:if="{{empty_tip.state}}" image="{{empty_tip.image}}" description="{{empty_tip.description}}" />
+<van-popup show="{{ show_popup }}" closeable close-icon-position="top-right" position="left"
+  custom-style="height: 100%; width:300rpx" bind:close="closePopup">
+  <checkbox-group  wx:for="{{filter_field}}" wx:for-item="field" wx:key="index" wx:if="{{field.arr.length}}" bindchange="{{field.event}}" class="popup-box">
+    <text class="popup-title">{{field.title}}</text>
+    <view wx:for="{{field.arr}}" wx:key="index" class="checkbox-item">
+      <label>
+        <text>{{item}}</text>
+        <checkbox value="{{item}}" checked="{{field.checked}}"/>
+      </label>
+    </view>
+  </checkbox-group>
+</van-popup>
+<van-notify id="van-notify" />
+<template wx:if="{{show_solo}}" is="loadmore" data="{{icon:'/assets/images/solo.png',text:'到底啦...',show_line:true}}"/>

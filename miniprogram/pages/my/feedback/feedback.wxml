@@ -1,0 +1,9 @@
+<!--pages/my/feedback/feedback.wxml-->
+<form action="">
+  <textarea name="feedback" id="feedback" rows="10" placeholder="使用问题/改进建议"></textarea>
+  <text class="feedback-tips">tips:无法确定问题可以点击下面指南按钮哦！</text>
+  <view class="feedback-action">
+    <button open-type='feedback' type='primary' size="mini">指南</button>
+    <button form-type="submit" type='primary' size="mini">提交</button>
+  </view>
+</form>

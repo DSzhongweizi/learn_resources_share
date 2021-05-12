@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "search": "../../../components/search/search",
+    "study-item": "../../../components/list-item/study-item/study-item"
+  },
+  "navigationBarTitleText": "学习资源"
+}

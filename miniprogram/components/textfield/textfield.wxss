@@ -1,0 +1,19 @@
+/* components/textfield/textfield.wxss */
+.textfield-box{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80rpx;
+  background-color: #AFB3BF;
+  padding:16rpx;
+}
+.textfield{
+  position: absolute;
+  border-radius: 10rpx;
+  padding: 16rpx;
+  height: 48rpx;
+  left: 16rpx;
+  right: 16rpx;
+  background-color: #fff;
+}

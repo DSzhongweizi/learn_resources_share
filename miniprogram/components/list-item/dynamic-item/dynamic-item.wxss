@@ -1,0 +1,17 @@
+/* components/list-item/dynamic-item/dynamic-item.wxss */
+.dynamic-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin: 10rpx;
+  padding: 10rpx;
+}
+.dynamic-datetime{
+  font-size: 24rpx;
+}
+.dynamic-content{
+  font-size: 28rpx;
+  color: #666;
+}

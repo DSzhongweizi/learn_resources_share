@@ -1,0 +1,27 @@
+<!--components/comment/comment.wxml-->
+<view class="comment-box">
+  <view class="comment-info">
+    <image class="avatar" src="{{comment.avatar}}" />
+    <text class="nickname">{{comment.nickname}}</text>
+    <text class="like-count" wx:if="{{comment.like}}">{{comment.like}}</text>
+    <i class="iconfont {{isLiked ? 'icon-like-activate' : ''}} icon-like" bindtap="clickCommentLike"></i>
+  </view>
+  <!-- <text wx:if="{{showReplyText}}" class="goalUserName">回复{{goalName}}</text> -->
+  <text class="comment-content">{{comment.content}}</text>
+  <view>
+    <text class="comment-other">{{comment.datetime}}</text>
+    <!-- <text class="comment-other" catchtap="clickReply" wx:if="{{!isReply}}">回复</text> -->
+  </view>
+  <comment wx:for="{{comment.replies}}" wx:key="rid"
+    pid="{{pid}}" 
+    cid="{{cid}}"
+    rid="{{item.rid}}"
+    avatar="{{item.avatar}}" 
+    nickname="{{item.nickname}}"
+    content="{{item.content}}"
+    datetime="{{item.datetime}}" 
+    like="{{item.like}}"
+    isReply="{{item.isReply}}"
+  />
+</view>
+<textfield bind:confirmInput="confirmReply" isInput="{{isInput}}" placeholderText="回复"/>

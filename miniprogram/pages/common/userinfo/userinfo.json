@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "dynamic-item":"/components/list-item/dynamic-item/dynamic-item",
+    "van-empty": "@vant/weapp/empty/index"
+  },
+  "navigationBarTitleText": "用户"
+}

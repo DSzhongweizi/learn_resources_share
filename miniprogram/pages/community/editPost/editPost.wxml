@@ -1,0 +1,15 @@
+<!--pages/community/editTrends/editTrends.wxml-->
+<view class="section">
+  <form action="" bindsubmit="postMessage">
+    <textarea name="post" cols="30" rows="20" placeholder="发帖"></textarea>
+    <van-uploader file-list="{{ post.image_lists }}" multiple 
+      max-count= "8"
+      max-size= '5242880'
+      preview-size = "{{preview_size}}"
+      bind:after-read ="uploadImageToCloud" 
+      catch:delete = "deleteImage"
+      bind:oversize = "oversize"
+    />
+    <button type="primary" form-type="submit" style="margin-top:40rpx">发表</button>
+  </form>
+</view>

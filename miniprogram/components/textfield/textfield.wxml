@@ -1,0 +1,11 @@
+<!--components/textfield/textfield.wxml-->
+<view class="textfield-box" style="bottom:{{bottom}}px" wx:if="{{isInput}}">
+  <input class="textfield" type="text" confirm-type="send" focus="{{is_focus}}"
+    placeholder="{{placeholderText}}" 
+    adjust-position="{{false}}"
+    value="{{input_value}}" 
+    bindblur="inputBlur"
+    bindfocus="inputFocus" 
+    bindconfirm="inputConfirm" 
+  />
+</view>

@@ -1,0 +1,28 @@
+<!--program/pages/message/message.wxml-->
+<search placeholder="搜索" bind:searchInput="searchInput" history_records="{{history_records}}" refer_search="message_search"/>
+<view class="message-box">
+  <view class="message-item" wx:for="{{fields}}" wx:key="index" bindtap="{{item.event}}">
+    <view class="left">
+      <i class="iconfont icon-{{index}}"></i>
+    </view>
+    <view class="middle">
+      <text class="title">{{item.title}}</text>
+      <text class="subtitle">{{item.subtitle}}</text>
+    </view>
+    <i wx:if="{{item.has_message}}" class="iconfont icon-dot"></i>
+    <i wx:else class="iconfont icon-right-arrow"></i>
+  </view>
+  <!-- 私信列表 -->
+  <view class="message-item" wx:for="{{privateletters}}" wx:key="index" bindtap="privateLetter" data-userid="{{item.userid}}">
+    <image class="avatar" src="{{item.avatar || '../../assets/images/avatar_boy.png'}}" ></image>
+    <view class="middle">
+      <view class="title-box">
+        <text class="title">{{item.username}}</text>
+        <!-- <text class="datetime">{{item.datetime}}</text> -->
+      </view>
+      <text class="subtitle">{{item.content}}</text>
+    </view>
+    <i wx:if="{{item.has_message}}" class="iconfont icon-dot"></i>
+    <i wx:else class="iconfont icon-right-arrow"></i>
+  </view>
+</view>

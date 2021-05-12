@@ -1,0 +1,4 @@
+<!--components/return-top/return-top.wxml-->
+<view class="return-top-box" bindtap="returnTop">
+  <i class="iconfont icon-return-top"></i>
+</view>

@@ -1,0 +1,12 @@
+<!--components/list-item/attention/attention.wxml-->
+<view class="attention-content">
+  <view class="content-left">
+    <image class="user-avatar" bindtap="navigatoUserInfo" src="{{userInfo.avatarUrl ? userInfo.avatarUrl : '/assets/images/avatar_girl.png'}}" ></image>
+    <view class="user-onther">
+      <text class="nickname" bindtap="navigatoUserInfo">{{userInfo.nickName}}</text>
+      <text class="signature">{{userInfo.sign ? userInfo.sign : '该用户很懒~没留下任何签名'}}</text>
+    </view>
+  </view>
+  <text class="state {{isAttention ? 'state-yes' : 'state-no'}}"
+    bindtap="attentionAction">{{isAttention ? '已关注' : target == 'fans' ? '回关' : '关注'}}</text>
+</view>

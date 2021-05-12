@@ -1,0 +1,97 @@
+/* components/post/post.wxss */
+@import "/assets/styles/iconfont.wxss";
+.post-box{
+  margin: 20rpx;
+}
+.info,.action-box{
+  overflow: hidden;
+}
+.avatar,.other{
+  float: left;
+  height: 80rpx;
+  vertical-align: center;
+}
+.other{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.avatar{
+  width: 80rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.other .nickname{
+  font-size: 30rpx;
+}
+.other .datetime{
+  font-size: 25rpx;
+  color: #AFB3BF;
+}
+.icon-more{
+  float: right;
+}
+.post{
+  margin: 20rpx 0;
+}
+.photos-box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.browse-count{
+  color: #AFB3BF;
+  font-size: 20rpx;
+}
+.action-box{
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.action{
+  float: right;
+  display: flex;
+  align-items: center;
+}
+.icon-like,.icon-remark{
+  margin: 0 10rpx;
+}
+.icon-like{
+  font-size: 64rpx;
+}
+.icon-remark{
+  font-size: 60rpx;
+}
+.icon-like-activate{
+  color: #cc0000;
+}
+/* .action-icon{
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align:middle;
+  margin-left: 20rpx;
+} */
+.comment-input-box{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80rpx;
+  background-color: #AFB3BF;
+  padding: 16rpx;
+}
+.comment-input{
+  position: absolute;
+  border-radius: 10rpx;
+  padding: 16rpx;
+  height: 48rpx;
+}
+.comment-input{
+  left: 16rpx;
+  /* width: 100%; */
+  right: 16rpx;
+  background-color: #fff;
+}
+/* .comment-btn{
+  text-align: center;
+  right: 0.5rem;
+  width: 15%;
+  background-color: #18B4ED;
+} */

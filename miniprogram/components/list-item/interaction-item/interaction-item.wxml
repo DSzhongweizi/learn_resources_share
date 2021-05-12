@@ -1,0 +1,10 @@
+<!--components/list-item/interaction/interaction-item.wxml-->
+<view class="interaction-item" bindtap="navigatoPostDetail">
+  <image class="avatar" src="{{interaction.avatar}}" catchtap="navigatoUserInfo"></image>
+  <view class="middle">
+    <text class="title" catchtap="navigatoUserInfo">{{interaction.username}}</text>
+    <text wx:if="{{interaction.content}}" class="subtitle">{{'评论：'+ interaction.content}}</text>
+    <text wx:else class="subtitle">{{'点赞了你的帖子'}}</text>
+  </view>
+  <text class="right">详情</text>
+</view>

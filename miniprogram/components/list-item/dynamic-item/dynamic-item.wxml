@@ -1,0 +1,8 @@
+<!--components/list-item/dynamic-item/dynamic-item.wxml-->
+<view class="dynamic-box">
+  <text class="dynamic-datetime">{{record.datetime}} {{record.fileid ? "上传了" + record.category : "发表了帖子"}}
+  </text>
+  <view class="dynamic-content">
+    {{record.fileid ? record.filename :  record.content}}
+  </view>
+</view>

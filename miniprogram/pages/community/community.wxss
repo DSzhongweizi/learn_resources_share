@@ -1,0 +1,23 @@
+/* pages/community/community.wxss */
+movable-area{
+  position: fixed;
+  pointer-events: none;   /* 保证事件可以穿透*/
+  top: 0;
+  left: 16rpx;
+  right: 16rpx;
+  /* background-color: darkcyan; */
+  width: auto;
+  height: 100%;
+}
+movable-view{
+  top: auto;
+  left: auto;
+}
+movable-view,.writePost{
+  pointer-events:auto;
+  bottom: 32rpx;
+  right: 16rpx;
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+}

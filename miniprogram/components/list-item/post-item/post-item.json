@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mp-actionSheet": "../../../miniprogram_npm/weui-miniprogram/actionsheet/actionsheet",
+    "textfield":"../../textfield/textfield",
+    "comment-item":"../comment-item/comment-item",
+    "van-empty": "@vant/weapp/empty/index"
+  }
+}

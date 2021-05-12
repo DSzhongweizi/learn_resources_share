@@ -1,0 +1,14 @@
+/* pages/my/feedback/feedback.wxss */
+textarea{
+  background-color: #fff;
+  width: 100%;
+}
+.feedback-tips{
+  margin: 20rpx;
+  font-size: 0.5rem;
+  color: #9b9999;
+}
+.feedback-action{
+  display: flex;
+  justify-content: space-around;
+}

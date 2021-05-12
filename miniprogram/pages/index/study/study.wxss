@@ -1,0 +1,32 @@
+/* pages/index/paper/paper.wxss */
+@import "/assets/templates/templates.wxss";
+.popup-box{
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup-title{
+  font-size: 48rpx;
+  color: #06b6fc;
+}
+.checkbox-item{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1rpx solid #ccc;
+  padding: 20rpx;
+}
+.checkbox-item label{
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  /* justify-content: space-between; */
+}
+.checkbox-item text,.checkbox-item checkbox{
+  flex: 1;
+  text-align: center;
+}
+
+

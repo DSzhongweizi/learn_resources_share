@@ -1,0 +1,11 @@
+<!--program/pages/index/match/match.wxml-->
+<import src="/assets/templates/templates.wxml" />
+<search placeholder="搜索相关赛事" 
+  bind:searchInput="searchInput" 
+  history_records="{{history_records}}" 
+  refer_search="match_search"
+/>
+<match-item wx:for="{{matchs}}" wx:key="index" match="{{item}}"/>
+<van-empty wx:if="{{empty_tip.state}}" image="{{empty_tip.image}}" description="{{empty_tip.description}}" />
+<return-top wx:if="{{show_return_top_btn}}" />
+<template wx:if="{{show_solo}}" is="loadmore" data="{{icon:'/assets/images/solo.png',text:'到底啦...',show_line:true}}"/>

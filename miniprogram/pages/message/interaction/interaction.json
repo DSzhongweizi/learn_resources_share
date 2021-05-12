@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "interaction-item":"/components/list-item/interaction-item/interaction-item"
+  },
+  "navigationBarTitleText": "互动"
+}

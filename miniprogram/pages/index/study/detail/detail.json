@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-rate": "@vant/weapp/rate/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "circle-progress": "/components/circle-progress/circle-progress"
+  },
+  "navigationBarTitleText": "详情"
+}

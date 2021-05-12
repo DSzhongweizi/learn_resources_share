@@ -1,0 +1,30 @@
+/* program/pages/my/cleanCache/cleanCache.wxss */
+.clean-cache-box{
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+checkbox-group{
+  display: flex;
+  flex-direction: column;
+}
+label{
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  font-size: 48rpx;
+}
+checkbox .wx-checkbox-input {
+  width: 48rpx;
+  height: 48rpx;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #3cbcee;
+}
+button{
+  margin-top: 20rpx;
+  width: 6rem;
+}

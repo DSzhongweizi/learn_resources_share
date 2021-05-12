@@ -1,0 +1,32 @@
+<!--program/pages/common/userInfo/userinfo.wxml-->
+<view class="userinfo-box">
+  <view class="userinfo-top">
+    <view class="left">
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="right">
+      <view class="right-top">
+        <text class="nickname">{{userInfo.nickName}}</text>
+        <i class="iconfont icon-private-letter" bindtap="privateLetter"></i>
+        <i class="iconfont icon-attention {{isAttention ? 'icon-attentioned' : ''}}" bindtap="attention"></i>
+      </view>
+      <view class="right-bottom" wx:if="{{true}}">
+        <text wx:if="{{identity.school }}">{{identity.school }}</text>
+        <text wx:if="{{identity.major}}">{{identity.major}}</text>
+        <text wx:if="{{identity.grade}}">{{identity.grade}}</text>
+        <text>访问量 {{oneself.pv || 0}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="userinfo-middle">
+    <text>关注 {{oneself.attentions.length || 0}}</text>
+    <text>粉丝 {{oneself.fans.length || 0}}</text>
+    <text>获赞 {{oneself.like_count || 0}}</text>
+    <text>收藏 {{oneself.collects.length || 0}}</text>
+    <text>积分 {{oneself.integration || 5}}</text>
+  </view>
+  <view class="userinfo-bottom">
+    <van-empty wx:if="{{!records.length}}" description="无动态的哦" />
+    <dynamic-item wx:for="{{records}}" wx:key="index" record="{{item}}"/>
+  </view>
+</view>

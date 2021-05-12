@@ -1,0 +1,55 @@
+
+page{
+  background-color: #F1F1F1
+}
+.index-box{
+  margin: 20rpx;
+}
+.slide-item{
+  background-color: #ffffff;
+  border-radius: 20rpx; 
+  height: 300rpx;
+}
+.slide-item image{
+  height: 300rpx;
+  width: 100%;
+}
+.function-box{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20rpx 0;
+  
+}
+.function-box,.recommend-box{
+  background-color: #FFFFFF;
+  border-radius: 10rpx;
+  box-shadow: 5rpx 5rpx 5rpx #c5c5c5,-5rpx -5rpx 5rpx #c5c5c5;
+  padding: 10rpx;
+}
+.hr{
+  height: 2rpx;
+  width: 100%;
+  background-color: #999;
+}
+.function{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 25%;
+  align-items: center;
+  margin: 20rpx 0;
+}
+.function-img{
+  width: 100rpx;
+  height: 100rpx;
+}
+.text{
+  margin: 8rpx;
+  font-size: 26rpx
+}
+.van-icon{
+  font-size: 24rpx !important;
+}
+
+
+
+

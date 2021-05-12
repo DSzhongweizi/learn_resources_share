@@ -1,0 +1,63 @@
+<!--pages/my/uploadFile/uploadFile.wxml-->
+
+<van-tabs active="{{ active }}" animated swipeable>
+  <van-tab title="上传" name="upload">
+    <view class="load-file-box">
+      <form bindsubmit="uploadFile">
+        <view wx:if="{{!show_file_info}}" bindtap='selectFile' class="select-box">
+          <image src='../../../assets/images/select_file.png'></image>
+          <text>这里点击选择上传你的文件</text>
+        </view>
+        <view wx:else class="file-info">
+          <view>名字：<input name="name" value="{{fileName}}" type="text" /></view>
+
+          <view>类型：<input name="type" value="{{fileType}}" disabled /></view>
+          <view>大小：<input name="size" value="{{fileSize}}" disabled /></view>
+          <view wx:for="{{field}}" wx:key="index">{{item.zh}}：
+            <picker data-name="{{item.en}}" name="{{item.en}}" bindchange="pick" range="{{item.pick}}"
+              style="color:#{{item.v == '必填' ? '808080' : '10A2EB'}}">
+              {{item.v}}
+            </picker>
+          </view>
+          <view>备注：<input name="description" type="text" placeholder="可选" maxlength="50" /></view>
+          <view class="file-action">
+            <button bindtap="selectFile" size="mini" type="primary">重选</button>
+            <button bindtap="cancelSelectFile" size="mini" type="primary">取消</button>
+          </view>
+          <text class="tips">tips:文件名建议修改为简洁明了的</text>
+        </view>
+        <view>
+          <progress percent="{{upload_progress}}" show-info active="true" active-mode="forwards"
+            wx:if="{{show_progress}}"></progress>
+          <button wx:else type='primary' form-type='submit'>开始上传</button>
+        </view>
+      </form>
+      <view class="file-records">
+        <view class="records-title">上传记录</view>
+        <block wx:if="{{upload_file_records.length}}">
+          <view class="records-content" wx:for="{{upload_file_records}}" wx:key="index">
+            <text class="file-name">{{item.filename}}</text>
+            <text class="file-datetime">{{item.datetime}}</text>
+            <icon type="{{item.state}}" size="32rpx"></icon>
+          </view>
+        </block>
+        <view wx:else class="no-file-tips">暂未上传过文件</view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="下载" name="download">
+    <view class="load-file-box">
+      <view class="file-records">
+        <view class="records-title">下载记录</view>
+        <block wx:if="{{download_file_records.length}}">
+          <view class="records-content" wx:for="{{download_file_records}}" wx:key="index">
+            <text>{{item.filename}}</text>
+            <text>{{item.datetime}}</text>
+            <icon type="{{item.state}}" size="32rpx"></icon>
+          </view>
+        </block>
+        <view wx:else class="no-file-tips">暂未下载过文件</view>
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>

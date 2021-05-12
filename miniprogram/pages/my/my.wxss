@@ -1,0 +1,106 @@
+/**index.wxss**/
+@import "../../assets/styles/iconfont.wxss";
+page{
+  background-color: #F1F1F1
+}
+.icon-layout{
+  position: fixed;
+  top: 0;
+  right: 10rpx;
+  color: #0b9eee;
+}
+.my-box{
+  margin: 0 30rpx;
+  position: relative;
+}
+.userinfo,.userinfo-rowlayout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+.userinfo-rowlayout{
+  flex-direction: row;
+}
+.userinfo button{
+  margin-top: 64rpx;
+}
+.userinfo-avatar {
+  flex: none;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 40rpx;
+  border-radius: 50%;
+}
+.userinfo-more,.userinfo-more-rowlayout{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.userinfo-more{
+  align-items: center;
+}
+.userinfo-more-rowlayout{
+  align-items: flex-start;
+}
+.userinfo-sign,.userinfo-sign-rowlayout{
+  font-size: 24rpx;
+  color: #aaa;
+  width: 100%;
+}
+.userinfo-sign{
+  text-align: center;
+}
+.userinfo-nickname{
+  font-size: 48rpx;
+}
+.my-middle{
+  display: flex;
+  justify-content: space-around;
+  margin: 50rpx 0;
+}
+.my-middle .middle-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.my-middle .middle-icon{
+  width: 100rpx;
+  height: 100rpx;
+}
+.my-bottom{
+  background-color: #FFFFFF;
+  border-radius: 20rpx;
+}
+.line-box{
+  font-size: 30rpx;
+  color: #8799a3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 16rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.line-left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center
+}
+.bottom-icon{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx
+}
+.button{
+  /* width:  */
+  size: 50rpx
+}
+.my-tips{
+  margin: 20rpx 0;
+  width: 100vw;
+  text-align: center;
+  font-size: 20rpx;
+  color: #aaa;
+}

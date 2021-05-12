@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "search": "../../components/search/search",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "match-item": "../../components/list-item/match-item/match-item",
+    "study-item": "../../components/list-item/study-item/study-item"
+    
+  }
+}

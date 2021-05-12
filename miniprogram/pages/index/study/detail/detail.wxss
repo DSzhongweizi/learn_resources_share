@@ -1,0 +1,96 @@
+/* program/pages/index/study/detail/detail.wxss */
+@import "../../../../assets/styles/iconfont.wxss";
+.loading{
+  position: fixed;
+  /* background-color: #fff;
+  border-radius: 10rpx; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+}
+.detail-box{
+  background-color: #fff;
+  margin: 0 10rpx;
+}
+.detail-title{
+  font-size: 2rem;
+  text-align: center;
+}
+.detail-onther{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 0.8rem;
+  color: #919191;
+}
+.detail-content{
+  margin: 20rpx;
+}
+.detail-tags{
+  display: flex;
+  justify-content: space-evenly;
+}
+.tags-item{
+  background-color: #FF976A;
+  border-radius: 5rpx;
+  font-size: 25rpx;
+  padding: 8rpx;
+}
+.detail-action{
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-evenly;
+}
+.iconfont{
+  font-size: 1.5rem;
+}
+.icon-collected{
+  color: #FC5531;
+}
+.remark-area{
+  width: 100%;
+  background-color: #F7F7FC;
+}
+.van-popup{
+  padding: 20rpx;
+  width: 80%;
+  border-radius: 10rpx;
+}
+.rate-popup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rate-popup button{
+  width: 100%;
+}
+.detail-comments{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.remark-left{
+  width: 35vw;
+  font-size: 13px;
+}
+.remark-nickname{
+  color: #999AAA;
+}
+.remark-right{
+  width: 65vw;
+  /* white-space: nowrap; */
+}
+.remark-date{
+  margin-left: 20rpx;
+  font-size: 0.8rem;
+  color: #999AAA;
+}
+
+.detail-tips{
+  margin: 20rpx 0;
+  width: 100vw;
+  text-align: center;
+  font-size: 20rpx;
+  color: #aaa;
+}
+

@@ -1,0 +1,47 @@
+/* components/comment/comment.wxss */
+@import "/assets/styles/iconfont.wxss";
+.comment-box{
+  margin: 10rpx;
+  padding: 5rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.comment-info{
+  height: 60rpx;
+}
+.avatar,.nickname{
+  float: left;
+}
+.avatar{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.nickname{
+  line-height: 60rpx;
+  font-size: 26rpx;
+}
+.icon-like{
+  font-size: 48rpx;
+}
+.icon-like-activate{
+  color: #cc0000;
+}
+.like-count,.icon-like{
+  float: right;
+}
+.comment{
+  margin:5rpx 20rpx ;
+  font-size: 26rpx;
+}
+.comment-content{
+  margin-left: 20rpx;
+}
+.comment-other{
+  margin: 5rpx 20rpx;
+  color: #9e9c9c;
+  font-size: 20rpx;
+}
+.goalUserName{
+  color: #007ac0;
+}

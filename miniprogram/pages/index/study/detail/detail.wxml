@@ -1,0 +1,54 @@
+<!--program/pages/index/study/detail/detail.wxml-->
+<view class="detail-box">
+  <view class="detail-title">{{study.name}}</view>
+  <view class="detail-onther">
+    <text bindtap="navigatoUserInfo">{{study.uploader}}</text>
+    <text>{{study.datetime}}</text>
+    <text>{{study.size}}</text>
+    <text>{{study.type}}</text>
+    <van-rate value="{{study.rate}}" bind:change="onChange" allow-half readonly size="0.8rem" />
+  </view>
+  <view class="detail-content">
+    <text space="nbsp">{{study.description}}</text>
+  </view>
+  <view class="detail-tags">
+    <text class="tags-item" wx:for="{{study.tags}}" wx:key="index">{{item}}</text>
+  </view>
+  <view class="detail-action">
+    <i class="iconfont icon-remark" bindtap="remark"></i>
+    <i class="iconfont {{is_collect ? 'icon-collected' : 'icon-collect'}}" bindtap="collect"></i>
+    <i class="iconfont icon-download" bindtap="download"></i>
+  </view>
+  <form bindsubmit="submitRemark" wx:if="{{show_textarea}}"  class="remark-area">
+    <textarea disabled="{{is_abled}}" confirm-type="done"
+      placeholder="请在这里输入您的评论" bindinput="inputRemark" value="{{remark}}" bindconfirm="submitRemark" />
+    <button form-type="submit" type ="primary">确认</button>
+  </form>
+  
+  <van-popup show="{{ show_popup }}" closeable bind:close="closePopup">
+    <form bindsubmit="submitRate">
+      <view class="rate-popup">
+        <text>评价一下该资料</text>
+        <van-rate name="rate" style="margin:20px"/>
+        <button form-type="submit">确定</button>
+      </view>
+    </form>
+  </van-popup>
+  <view class="detail-comments" wx:for="{{study.comments}}" wx:key="index">
+    <view class="remark-left">
+      <text class="remark-nickname">{{item.commenter}}：</text>
+      <text class="remark-content">{{item.content}}</text>
+    </view>
+    <view class="remark-right">
+      <van-rate value="{{item.rate}}" bind:change="onChange" readonly size="0.8rem"/>
+      <text class="remark-date">{{item.datetime}}</text>
+    </view>
+  </view>
+  <view class="detail-tips">
+    <text>tips：重复下载同一个文件，不需要额外积分哦！</text>
+  </view>
+</view>
+
+<van-notify id="van-notify" />
+<van-loading wx:if="{{show_loading}}" vertical="true" color="#0094FF" custom-class="loading" size="50">资源准备中...</van-loading>
+<circle-progress style="display:{{show_progress ? 'block' : 'none'}}" id="circle-progress" progress="{{download_progress}}"/>

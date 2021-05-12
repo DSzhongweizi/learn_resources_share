@@ -1,0 +1,38 @@
+<!--program/pages/my/useHelp/useHelp.wxml-->
+<view class="use-help-box">
+  <view class="use-help-title">使用帮助</view>
+  <van-collapse value="{{ activeNames }}" accordion bind:change="onChange">
+    <van-collapse-item title="搜索输入" name="search" icon="class:'iconfont icon-search'">
+      1. 关键词之间用空格分隔； \r\n
+      2. 输入后完成，可生成历史记录 \r\n
+
+    </van-collapse-item>
+    <van-collapse-item title="积分规则" name="integrate" icon="class:'iconfont icon-integrate'">
+      <text>
+      1. 用户第一次登录，将获得+5的积分； \r\n
+      2. 用户每上传一份资料且过审核，将获得+3的积分； \r\n
+      3. 用户的每一次下载，将消耗1-5不等的积分，下载已经下载过的资料不消耗积分
+      </text>
+    </van-collapse-item>
+    <van-collapse-item title="社区规范" name="community" icon="class:'iconfont icon-community'">
+      <view class="use-help-community-title">发文限制</view>
+      <view class="use-help-community-subtitle">用户不得利用该应用服务制作、上载、复制、发布、传播或者转载如下内容：</view>
+      <text>
+        1. 反对宪法所确定的基本原则的；\r\n
+        2. 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；\r\n
+        3. 损害国家荣誉和利益的；\r\n
+        4. 煽动民族仇恨、民族歧视，破坏民族团结的；\r\n
+        5. 侮辱、滥用英烈形象，否定英烈事迹，美化粉饰侵略战争行为的；\r\n
+        6. 破坏国家宗教政策，宣扬邪教和封建迷信的；\r\n
+        7. 散布谣言，扰乱社会秩序，破坏社会稳定的；\r\n
+        8. 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；\r\n
+        9. 侮辱或者诽谤他人，侵害他人合法权益的；\r\n
+        10. 含有法律、行政法规禁止的其他内容的信息。\r\n
+      </text>
+    </van-collapse-item>
+    <van-collapse-item title="其他" name="search" icon="class:'iconfont icon-search'">
+ 
+
+    </van-collapse-item>
+  </van-collapse>
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "textfield":"../../textfield/textfield",
+    "comment-item":"../comment-item/comment-item"
+  }
+}

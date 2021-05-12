@@ -1,0 +1,33 @@
+<!--components/post/post.wxml-->
+<view class="post-box" catchtap="navigateToPostDetail">
+  <view class="info">
+    <image class="avatar" src="{{post.avatar}}" bindtap="navigatoUserInfo"></image>
+    <view class="other">
+      <view class="nickname" bindtap="navigatoUserInfo">{{post.nickname}}</view>
+      <view class="datetime">{{post.datetime}}</view>
+    </view>
+    <i class="iconfont icon-more" catchtap="clickMore"></i>
+  </view>
+  <view class="post">
+    <text>{{post.content}}</text>
+    <view class="photos-box">
+      <image wx:for="{{post.image_lists}}" wx:key="index" wx:if="{{item}}" 
+        class="photo" src="{{item.url}}" mode="scaleToFill" 
+        style="height: {{imgHeight}}px;flex: 1 1 {{flex_percent}}%" 
+        catchtap="previewImage" data-idx="{{index}}"
+      />
+    </view>
+  </view>
+  <view class="action-box">
+    <text class="browse-count">浏览{{post.count.browse}}次</text>
+    <view class="action">
+      <i class="iconfont {{isLiked ? 'icon-like-activate' : ''}} icon-like" catchtap="clickLike"></i>
+      {{post.count.like ? post.count.like : ''}}
+      <i class="iconfont icon-remark" catchtap="clickComment"></i>
+      {{post.comments.length ? post.comments.length : ''}}
+    </view>
+  </view>
+</view>
+<textfield bind:confirmInput="confirmComment" isInput="{{isInput}}" placeholderText="评论" />
+<mp-actionSheet bindactiontap="moreAciton" bindclose="clickMask" show="{{showActionsheet}}" actions="{{groups}}" title="更多操作">
+</mp-actionSheet>

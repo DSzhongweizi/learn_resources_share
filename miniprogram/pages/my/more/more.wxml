@@ -1,0 +1,22 @@
+<!--program/pages/my/attention/attention.wxml-->
+
+<van-tabs active="{{ active }}" animated swipeable>
+  <van-tab wx:for="{{field}}" wx:for-index="idx" wx:for-item="target" wx:key="idx" title="{{target.zh}}" name="{{idx}}">
+    <view class="tab-item-box">
+      <attention-item wx:for="{{ idx == 'attention' ? attentions : fans}}" wx:key="index" userid="{{item}}" target="{{idx}}" />
+      <van-empty wx:if="{{!(idx == 'attention' ? attentions.length : fans.length)}}" image="error" description="您还没有任何{{target.zh}}" />
+    </view>
+  </van-tab>
+  <van-tab title="收藏" name="collect">
+    <view class="tab-item-box">
+      <collect-item wx:for="{{collects}}" wx:key="index" collectid="{{item}}"/>
+      <van-empty wx:if="{{!collects.length}}" image="error" description="您还没有任何收藏" />
+    </view>
+  </van-tab>
+  <van-tab title="喜欢" name="like">
+    <view class="tab-item-box">
+      <like-item wx:for="{{likes}}" wx:key="index" likeid="{{item}}"/>
+      <van-empty wx:if="{{!likes.length}}" image="error" description="您还没收到任何点赞" />
+    </view>
+  </van-tab>
+</van-tabs>

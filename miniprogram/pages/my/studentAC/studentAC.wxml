@@ -1,0 +1,11 @@
+<!--pages/my/studentAC/studentAC.wxml-->
+<view class="studengtAC-box">
+  <form bindsubmit="studengtAC">
+    <view wx:for="{{field}}" wx:key="index" class="field">{{item.zh}}
+      <picker data-name="{{item.en}}" range="{{item.pick}}" bindchange="pick" bindcancel ="cancelPick" header-text="请选择{{item.zh}}" style="color:#{{item.v == '选择' ? '808080' : '10A2EB'}}">
+        {{item.v}}
+      </picker>
+    </view>
+    <button wx:if="{{is_pick}}" type="primary" form-type="submit">确认</button>
+  </form>
+</view>

@@ -1,0 +1,71 @@
+/* components/list-item/competition-item/competition-item.wxss */
+.match-box {
+  border-radius: 10rpx;
+  border: 1rpx solid #aaa;
+  height: 400rpx;
+  margin: 20rpx;
+  padding: 10rpx;
+  background-color: #fff;
+}
+.match-img-box{
+  position: relative;
+}
+.match-img-box, .match-img {
+  width: 100%;
+  height: 250rpx;
+}
+.match-datetime-tags{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: -30rpx;
+  right: -30rpx;
+  justify-content: space-between;
+}
+.dt-tags-item{
+  background-color: #fd6843;
+  border-radius: 5rpx;
+  padding: 5rpx;
+  font-size: 20rpx;
+}
+.match-title{
+  width: 80%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.match-details {
+  font-size: 20rpx;
+  color: #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sponsor {
+  width: 90vw;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.details-more {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.more-item{
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+/* .more-text{
+  white-space: normal;
+} */
+.detail-datetime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

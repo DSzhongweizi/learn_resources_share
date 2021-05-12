@@ -1,0 +1,7 @@
+<!--components/list-item/like-item/like-item.wxml-->
+<view class="like-item-box" bindtap="navigatoPostDetails">
+  <view class="left">
+    {{like.content}}
+  </view>
+  <text class="right">详情</text>
+</view>

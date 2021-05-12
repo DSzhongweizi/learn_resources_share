@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "post-item": "../../components/list-item/post-item/post-item",
+    "search": "../../components/search/search",
+    "van-empty": "@vant/weapp/empty/index"
+  },
+  "navigationBarTitleText": "社区",
+  "enablePullDownRefresh": true
+}

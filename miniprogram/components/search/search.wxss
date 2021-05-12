@@ -1,0 +1,80 @@
+/* components/search/search.wxss */
+/* 搜索框 */
+@import "../../assets/styles/iconfont.wxss";
+.search-bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 116rpx;
+  background-color: #fff;
+  z-index: 10;
+}
+.search-box{
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+  right: 16rpx;
+  height: 80rpx;
+  border: 1rpx solid #a19f9f;
+  border-radius: 20rpx;
+}
+.icon-search, .icon-filter,.search-input{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.icon-search{
+  left: 32rpx;
+}
+.icon-filter{
+  right: 32rpx;
+}
+.search-input{
+  left: 64rpx;
+  right: 16rpx;
+  padding: 13rpx;
+}
+
+/* 历史记录 */
+.history-box{
+  position: absolute;
+  top: 96rpx;
+  left: 0;
+  right: 0;
+  border: 1rpx solid #e2e2e2;
+  border-radius: 10rpx;
+  background-color: #fff;
+  padding: 6.4rpx;
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+  margin: 6.4rpx 16rpx
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.title-text,.record-text{
+  color: #6b6060;
+  font-size: 26rpx;
+}
+.icon-delete{
+  font-size: 32rpx;
+}
+.record-text{
+  font-size: 20rpx;
+}
+.record-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F6F8F8;
+  border-radius: 20rpx;
+  margin: 8rpx;
+  padding: 8rpx 16rpx;
+}
+.placeholder-box{
+  margin-bottom: 110rpx;
+}
